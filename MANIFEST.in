@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include ecs_microfinance *.css
+recursive-include ecs_microfinance *.csv
+recursive-include ecs_microfinance *.html
+recursive-include ecs_microfinance *.ico
+recursive-include ecs_microfinance *.js
+recursive-include ecs_microfinance *.json
+recursive-include ecs_microfinance *.md
+recursive-include ecs_microfinance *.png
+recursive-include ecs_microfinance *.py
+recursive-include ecs_microfinance *.svg
+recursive-include ecs_microfinance *.txt
+recursive-exclude ecs_microfinance *.pyc
