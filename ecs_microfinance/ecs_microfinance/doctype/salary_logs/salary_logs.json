@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2023-02-23 13:39:51.766638",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "from_date",
+  "base",
+  "insurance_salary",
+  "gross",
+  "notes"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "From Date"
+  },
+  {
+   "columns": 2,
+   "fieldname": "base",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Base"
+  },
+  {
+   "columns": 2,
+   "fieldname": "insurance_salary",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Insurance Salary",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "gross",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Gross",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "notes",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-14 12:10:31.764505",
+ "modified_by": "Administrator",
+ "module": "Ecs Microfinance",
+ "name": "Salary Logs",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

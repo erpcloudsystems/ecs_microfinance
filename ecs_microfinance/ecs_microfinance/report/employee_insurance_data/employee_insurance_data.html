@@ -1,0 +1,271 @@
+<!-- <link rel="stylesheet" type="text/css" media="print" href="print-styles.css"> -->
+    <style>
+        @media print {
+            .headerRow h6 {
+                font-size: 10px; /* Adjust font size for printing */
+            }
+            .header {
+                padding: 1% 0; /* Adjust top and bottom padding */.headerRight {
+                margin-left: auto; /* Move to the rightmost position */
+            }
+            .headerLeft {
+            margin-right: auto; /* Move to the leftmost position */
+            }
+
+    }
+
+    /* Add other print-specific styles as needed */
+        }
+
+
+        *{
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+        }
+        body p{
+            font-size: 13px;
+        }
+        .form{
+            width: 100%;
+            padding: 2% 4%;
+        }
+        .header{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+                    
+        }
+        .headerRight{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .headerRight img{
+            width: 80px;
+        }
+        .headerLeft{
+            display: flex;
+            align-items: center;
+            border: 1px solid rgb(61, 61, 61);
+            padding: 0 0px;
+        }
+        .headerLeft p{
+            border-left: 1px solid rgb(61, 61, 61) ;
+            padding: 3px;
+            margin-right: 20px;
+        }
+        .headerLeft div{
+            padding: 7px;
+        }
+        .headerBottom{
+            text-align: center;
+            margin-top: -35px;
+        }
+        .headerBottom h3{
+            text-decoration: underline;
+        }
+        .headerRow{
+            display: flex;
+            justify-content:space-between ;
+            padding: 5px 5px;
+            font-size: 15px;  
+            padding-left: 200px;
+        }
+        .headerRow h6 {
+            font-size: 1.2vw;
+        }
+        h4, .h4, h5, .h5, h6, .h6 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: small;
+        }
+        h3, .h3{
+            margin-top:0px;
+        }
+        table,th,td{
+            border: 2px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            vertical-align: center !important;
+        }
+        td{
+            padding: 3px 7px; 
+            height: 30px;
+        }
+        th{
+            padding: 4px 10px;
+        }
+        .footer{
+            margin: 20px 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 5pt;
+        }
+        .footerTop{
+            display: flex;
+            gap: 10px;
+            font-size: 5pt;
+        }
+        .footerMid{
+            display: flex;
+            gap: 50px;
+            padding-right: 200px;
+            font-size: 5pt;
+        }
+        .footerMidColumn{
+            align-self: flex-end;
+            font-size: 5pt;
+        }
+        .space{
+            padding: 0px 50px;
+        }
+        .footerEnd{
+            display: flex;
+            justify-content: space-between;
+            margin-left: 300px;
+            padding: 0px 20px;
+            
+        }
+        .df{
+            display: flex;
+            gap: 10px;
+            justify-content: end;
+        }
+        .pL{
+            padding-left: 250px;
+        }
+    </style>
+    {% let loopsNo = Math.ceil((data.length + 1) / 10) %}
+    {% for (var j = 0, f = loopsNo; j < f; j++) { %}
+    <div class="form">
+        <div class="header">
+            <div class="headerRight">
+                <img src="/files/WhatsApp Image 2024-01-11 at 1.48.30 PM.jpeg
+                " alt="" />
+                <div>
+                    <p>الهيئة القومية للتأمين الاجتماعى</p>
+                    <p>صندوق العاملين بقطاع الاعمال العام والخاص</p>
+                    <p>منطقة:</p>
+                    <p>مكتب:</p>
+                </div>
+            </div>
+            <div class="headerLeft">
+                <p> رقم المنشأة:</p>
+                <div>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</div>
+            </div>
+        </div>
+        <div class="headerBottom">
+            <h2>طلب اشتراك المنشأة</h2>
+            <h3>او اخطار تعديل بيانات لمؤمن عليهم وأجورهم فى &nbsp &nbsp &nbsp/&nbsp &nbsp &nbsp/ &nbsp &nbsp &nbsp 202م</h3>
+        </div>
+        <div class="headerRow">
+            <h6> اسم المنشأة: ___________________</h6>
+            <h6> المالك / المدير المسئول:&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</h6>
+            <h6> الشكل القنونى للمنشأة: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </h6>
+        </div>
+        <div class="headerRow">
+            <h6> عنوان المنشأة:&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</h6>
+            <h6> رقم العقار:</h6>
+            <h6> اسم الشارع:&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</h6>
+            <h6> الشياخة / القرية:&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</h6>
+            <h6> القسم / المركز:&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</h6>
+            <h6> المحافظة:&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</h6>
+        </div>
+        <div class="headerRow">
+            <h6> نسبة تأمين المرض:</h6>
+            <h6> تاريخ بدء النسبة: &nbsp &nbsp &nbsp /&nbsp &nbsp &nbsp/ &nbsp &nbsp &nbsp 20م.</h6>
+            <h6> اسم الشارع:</h6>
+            <h6>  نسبة تأمين الاصابة:</h6>
+            <h6>   تاريخ بدء النسبة: &nbsp &nbsp &nbsp /&nbsp &nbsp &nbsp/ &nbsp &nbsp &nbsp 20م.</h6>
+        </div>
+        <div class="headerRow">
+            <h6>   تاريخ التوقف / الاستمرار: &nbsp &nbsp &nbsp /&nbsp &nbsp &nbsp/ &nbsp &nbsp &nbsp 20م.</h6>
+            <h6> سبب التوقف:</h6>
+            <h6> بدء لنشاط:</h6>
+            <h6>   رقم تسجيل المنشأة الضريبى: &nbsp &nbsp &nbsp /&nbsp &nbsp &nbsp/ &nbsp &nbsp &nbsp .</h6>
+        </div>
+        <div class="table">
+            <table dir="rtl" style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th rowspan="2">الرقم التأمينى</th>
+                        <th rowspan="2">اسم المؤمن عليه</th>
+                        <th rowspan="2">الرقم القومى</th>
+                        <th rowspan="2">تاريخ الالتحاق</th>
+                        <th rowspan="2">النوع </th>
+                        <th colspan="2">اجر الاشتراك التأمينى</th>
+                        <th colspan="2">الاجر الشامل  </th>
+                    </tr>
+                    <tr> 
+                        <th>قرش</th>
+                        <th>جنيه</th>
+                        <th>قرش</th>
+                        <th>جنيه</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for (var i = 10 * j, ff = Math.min(10 * (j + 1), data.length); i < ff; i++) { %}
+                    <tr><td>{%= data[i].health_insurance_no %}</td>
+                        <td>{%= data[i].employee_name %}</td>
+                        <td>{%= data[i].national_id %}</td>
+                        <td>{%= data[i].date_of_joining %}</td>
+                        <td>{%= data[i].gender %}</td>
+                        <td>{%= data[i].insurance_salary_cent %}</td>
+                        <td>{%= data[i].insurance_salary_pound %}</td>
+                        <td>{%= data[i].gross_salsry_cent %}</td>
+                        <td>{%= data[i].gross_salsry_pound %}</td>
+                    </tr>
+                    {% } %}
+                </tbody>
+            </table>
+
+            <div class="footer">
+                <div class="footerTop">
+                    <h4>اقر انا &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</h4>
+                    <h4>بصفتى المدير المسئول بأن اجمالى أعداد المؤمن عليهم 0 عامل</h4>
+                </div>
+                <div class="footerMid">
+                    <div class="footerMidColumn">
+                        <h4>وبأن اجمالى الاجور التأمينية هى</h4>
+                        <h4>وبأن اجمالى الاجور التأمينية هى</h4>
+                    </div>
+                    <div>
+                        <h4>قرش</h4>
+                        <h4>0</h4>
+                        <h4>0</h4>
+                    </div>
+                    <div>
+                        <h4>جنيه</h4>
+                        <h4>ج.م.0.00</h4>
+                        <h4>ج.م.0.00</h4>
+                    </div>
+                    <div>
+                        <h4>وبأن جميع البيانات الواردة فى هذه الاستمارة وملحقاتها</h4>
+                        <h4>صحيحة.</h4>
+                        <h4>(الاجر الشامل لحساب اشتراكات التأمين الصحى)</h4>
+                    </div>
+                </div>
+                <h4 class="pL">وأنى أتحمل المسئولية القانونية عن صحة البيانات الواردة بهذه الاستمارة وفى حالة المخالفة تطبق العقوبات المنصوص عليها بالقانون رقم 148 لسنة 2019 مع عدم الاخلال بأى عقوبات اشد واردة فى قانون العقوبت او اى قانون اخر.</h4>
+                <h4>صاحب العمل أو المدير المسئول (  <span class="space"></span> ) روجعت بيانات هذ الطلب على طلبات اشتراك المؤمن عليهم ووجدت صحيحة</h4>
+                <div class="footerEnd">
+                    <div>
+                        <h4>مستلم الاستمارة /    .............................</h4>
+                        <h4>اخصائى الاشتراكات /  .............................</h4>
+                    </div>
+                    <div>
+                        <h4>تمت مطابقة التوقيع بمعرفتى /   ...........................................</h4>
+                        <div class="df">
+                            <h4>سجل آليا /  ........................</h4>
+                            <h4>روجع آليا /  ......................</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p style="page-break-after: always;">&nbsp;&nbsp;&nbsp;</p>    
+
+{% } %}

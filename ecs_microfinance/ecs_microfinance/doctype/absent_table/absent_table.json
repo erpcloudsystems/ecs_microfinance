@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-06-14 13:45:50.597453",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "no_of_absent_0",
+  "no_of_absent_1",
+  "no_of_absent_2",
+  "no_of_absent_3",
+  "no_of_absent_4",
+  "salary_component"
+ ],
+ "fields": [
+  {
+   "columns": 3,
+   "fieldname": "salary_component",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Salary Component",
+   "options": "Salary Component"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "shift_type.end_time",
+   "fieldname": "no_of_absent_0",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "1st Time"
+  },
+  {
+   "columns": 1,
+   "fieldname": "no_of_absent_1",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "2nd Time"
+  },
+  {
+   "columns": 1,
+   "fieldname": "no_of_absent_2",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "3rd Time"
+  },
+  {
+   "columns": 1,
+   "fieldname": "no_of_absent_3",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "4th Time"
+  },
+  {
+   "columns": 1,
+   "fieldname": "no_of_absent_4",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "5th Time"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-03 15:56:31.224473",
+ "modified_by": "Administrator",
+ "module": "Ecs Microfinance",
+ "name": "Absent Table",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,176 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-06-11 14:38:56.639947",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "transaction_type",
+  "sector",
+  "program",
+  "column_break_5",
+  "bond_size",
+  "number_of_contracts",
+  "target_date_of_closure",
+  "section_break_8",
+  "spv_company",
+  "legal_advisor",
+  "auditor",
+  "investment_banker",
+  "column_break_13",
+  "spv_company_contact",
+  "legal_advisor__contact",
+  "auditor_contact",
+  "investment_banker_contact",
+  "section_break_18",
+  "number_of_shadow_rating_files",
+  "request",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming_series",
+   "options": "ME-"
+  },
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Select",
+   "label": "Transaction type",
+   "options": "\nSecuritization\nSukuk\nEntity Rating\nCorporate Bond\nCommercial Paper\nFuture Cash Flow\nFinancial Institutions\nOthers"
+  },
+  {
+   "fieldname": "sector",
+   "fieldtype": "Data",
+   "label": "Sector"
+  },
+  {
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "label": "Program",
+   "options": "Program"
+  },
+  {
+   "fieldname": "bond_size",
+   "fieldtype": "Float",
+   "label": "Bond size"
+  },
+  {
+   "fieldname": "number_of_contracts",
+   "fieldtype": "Data",
+   "label": "Number of Contracts"
+  },
+  {
+   "fieldname": "target_date_of_closure",
+   "fieldtype": "Date",
+   "label": "Target Date of Closure"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "spv_company",
+   "fieldtype": "Data",
+   "label": "SPV Company"
+  },
+  {
+   "fieldname": "legal_advisor",
+   "fieldtype": "Data",
+   "label": "Legal Advisor"
+  },
+  {
+   "fieldname": "auditor",
+   "fieldtype": "Data",
+   "label": "Auditor"
+  },
+  {
+   "fieldname": "investment_banker",
+   "fieldtype": "Data",
+   "label": "Investment Banker"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "spv_company_contact",
+   "fieldtype": "Data",
+   "label": "SPV Company Contact"
+  },
+  {
+   "fieldname": "legal_advisor__contact",
+   "fieldtype": "Data",
+   "label": "Legal advisor  Contact"
+  },
+  {
+   "fieldname": "auditor_contact",
+   "fieldtype": "Data",
+   "label": "Auditor Contact"
+  },
+  {
+   "fieldname": "investment_banker_contact",
+   "fieldtype": "Data",
+   "label": "Investment Banker Contact"
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "number_of_shadow_rating_files",
+   "fieldtype": "Data",
+   "label": "Number of shadow rating files"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Meeting",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "request",
+   "fieldtype": "Link",
+   "label": "Request",
+   "options": "Request"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-14 11:55:24.719410",
+ "modified_by": "Administrator",
+ "module": "Ecs Microfinance",
+ "name": "Meeting",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

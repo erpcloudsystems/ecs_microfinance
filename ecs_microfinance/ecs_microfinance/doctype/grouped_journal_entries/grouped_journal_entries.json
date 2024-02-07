@@ -1,0 +1,285 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-02-23 11:05:03.865015",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "posting_date",
+  "voucher_type",
+  "reference_journal",
+  "column_break_3",
+  "reference_number",
+  "reference_date",
+  "amended_from",
+  "section_break_5",
+  "account",
+  "party_type",
+  "column_break11",
+  "debit_credit",
+  "party",
+  "column_break_9",
+  "amount",
+  "section_break_6",
+  "parent_territories",
+  "section_break_8",
+  "child_territories",
+  "section_break_10",
+  "button_11",
+  "section_break_12",
+  "accounts_logs",
+  "section_break_14",
+  "total_debit",
+  "column_break_16",
+  "total_credit",
+  "section_break_18",
+  "grouped_journal_entries",
+  "section_break_21",
+  "total_debit_entries",
+  "column_break_22",
+  "total_credit_entries",
+  "section_break_28",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "no_copy": 1,
+   "options": "G-JE-.YYYY.-",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "label": "Account",
+   "no_copy": 1,
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "debit_credit",
+   "fieldtype": "Select",
+   "label": "Debit / Credit",
+   "no_copy": 1,
+   "options": "\nDebit\nCredit"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "parent_territories",
+   "fieldtype": "Table",
+   "label": "Parent Territories",
+   "no_copy": 1,
+   "options": "Parent Territory"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "child_territories",
+   "fieldtype": "Table",
+   "label": "Child Territories",
+   "no_copy": 1,
+   "options": "Child Territories"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.docstatus ==0",
+   "fieldname": "button_11",
+   "fieldtype": "Button",
+   "label": "<b>Load Entries</b>"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Grouped Journal Entries",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "accounts_logs",
+   "fieldtype": "Table",
+   "label": "Accounts Logs",
+   "options": "Accounts Logs"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_debit",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Debit",
+   "precision": "5",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_credit",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Credit",
+   "precision": "5",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "grouped_journal_entries",
+   "fieldtype": "Table",
+   "label": "Grouped Journal Entries",
+   "options": "Grouped Journal Entries Table"
+  },
+  {
+   "depends_on": "eval:doc.docstatus ==0",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "no_copy": 1
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_21",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_debit_entries",
+   "fieldtype": "Currency",
+   "label": "Total Debit Entries",
+   "precision": "5",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_credit_entries",
+   "fieldtype": "Currency",
+   "label": "Total Credit Entries",
+   "precision": "5",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "section_break_28",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reference_number",
+   "fieldtype": "Data",
+   "label": "Reference Number"
+  },
+  {
+   "fieldname": "reference_date",
+   "fieldtype": "Date",
+   "label": "Reference Date"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "reference_journal",
+   "fieldtype": "Link",
+   "label": "Reference Journal",
+   "no_copy": 1,
+   "options": "Journal Entry"
+  },
+  {
+   "fieldname": "voucher_type",
+   "fieldtype": "Select",
+   "label": "Entry Type",
+   "options": "Journal Entry\nInter Company\nJournal Entry\nBank Entry\nCash Entry\nCredit Card\nEntry Debit\nNote Credit\nNote Contra Entry\nExcise Entry Write Off Entry\nOpening Entry\nDepreciation Entry\nExchange Rate\nRevaluation\nDeferred Revenue\nDeferred Expense"
+  },
+  {
+   "fieldname": "party_type",
+   "fieldtype": "Link",
+   "label": "Party Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "party",
+   "fieldtype": "Dynamic Link",
+   "label": "Party",
+   "options": "party_type"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-09-24 11:22:50.370535",
+ "modified_by": "Administrator",
+ "module": "Ecs Microfinance",
+ "name": "Grouped Journal Entries",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

@@ -1,0 +1,153 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:department",
+ "creation": "2023-04-02 12:08:04.776251",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "designation",
+  "department",
+  "company",
+  "column_break_3",
+  "status",
+  "section_break_7",
+  "requested_by",
+  "requested_by_name",
+  "timelines_tab",
+  "posting_date",
+  "column_break_15",
+  "expected_by",
+  "section_break_17",
+  "job_request_detail",
+  "job_description_tab",
+  "reason_for_requesting"
+ ],
+ "fields": [
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Pending\nOpen & Approved\nRejected\nFilled\nOn Hold\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "Requested By"
+  },
+  {
+   "default": "User",
+   "fieldname": "requested_by",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Requested By",
+   "options": "User"
+  },
+  {
+   "fetch_from": "requested_by.full_name",
+   "fieldname": "requested_by_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Requested By (Name)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "timelines_tab",
+   "fieldtype": "Section Break",
+   "label": "Timelines"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expected_by",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expected By"
+  },
+  {
+   "fieldname": "job_description_tab",
+   "fieldtype": "Section Break",
+   "label": "Job Description"
+  },
+  {
+   "fieldname": "reason_for_requesting",
+   "fieldtype": "Small Text",
+   "label": "Reason for Requesting"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "job_request_detail",
+   "fieldtype": "Table",
+   "label": "Job Request Detail",
+   "options": "Job Request Detail"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-14 12:10:27.389282",
+ "modified_by": "Administrator",
+ "module": "Ecs Microfinance",
+ "name": "Job Request",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "designation",
+ "track_changes": 1
+}

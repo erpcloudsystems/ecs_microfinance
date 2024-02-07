@@ -1,0 +1,338 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-02-09 17:09:39.795116",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "applicant_form",
+  "client",
+  "fees_currency",
+  "contract_number",
+  "column_break_3",
+  "contract_date",
+  "transaction_type",
+  "bond_size",
+  "bond_currency",
+  "section_break_11",
+  "full_address",
+  "telephone",
+  "fax",
+  "column_break_15",
+  "authorized_signatory",
+  "signatory_titles",
+  "section_break_8",
+  "h3initial_rating_feesh3_column",
+  "initial_amount",
+  "h3renewal_rating_feesh3_column",
+  "renewal_amount",
+  "section_break_13",
+  "h3shadow_rating_feesh3_column",
+  "min",
+  "max",
+  "h3contract_expensesh3_column",
+  "contract_expenses_amount",
+  "payment_term_section",
+  "upon_signature_percent",
+  "upon_signature_amount",
+  "column_break_20",
+  "operation_review_percent",
+  "operation_review_amount",
+  "column_break_21",
+  "rating_comity_percent",
+  "rating_committee_amount",
+  "section_break_17",
+  "notes",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "CO-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "CO-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "applicant_form",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Applicant Form",
+   "options": "Applicant Information Form",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "applicant_form.company_legal_name",
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Client",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fees_currency",
+   "fieldtype": "Link",
+   "label": "Fees Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contract_number",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Contract Number",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "applicant_form.bond_size",
+   "fieldname": "bond_size",
+   "fieldtype": "Float",
+   "label": "Bond Size",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bond_currency",
+   "fieldtype": "Link",
+   "label": "Bond Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "h3initial_rating_feesh3_column",
+   "fieldtype": "Column Break",
+   "label": "<h4>Initial Rating Fees</h4>"
+  },
+  {
+   "fieldname": "initial_amount",
+   "fieldtype": "Float",
+   "label": "Initial Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "h3renewal_rating_feesh3_column",
+   "fieldtype": "Column Break",
+   "label": "<h4>Renewal Rating Fees</h4>"
+  },
+  {
+   "fieldname": "renewal_amount",
+   "fieldtype": "Float",
+   "label": "Renewal Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "h3shadow_rating_feesh3_column",
+   "fieldtype": "Column Break",
+   "label": "<h4>Shadow Rating Fees</h4>"
+  },
+  {
+   "default": "15000",
+   "fieldname": "min",
+   "fieldtype": "Float",
+   "label": "Min",
+   "reqd": 1
+  },
+  {
+   "default": "30000",
+   "fieldname": "max",
+   "fieldtype": "Float",
+   "label": "Max",
+   "reqd": 1
+  },
+  {
+   "fieldname": "h3contract_expensesh3_column",
+   "fieldtype": "Column Break",
+   "label": "<h4>Contract Expenses</h4>"
+  },
+  {
+   "fieldname": "contract_expenses_amount",
+   "fieldtype": "Float",
+   "label": "Contract Expenses Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_term_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Terms"
+  },
+  {
+   "fieldname": "upon_signature_percent",
+   "fieldtype": "Percent",
+   "label": "Upon Signature Percent (%)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "operation_review_percent",
+   "fieldtype": "Percent",
+   "label": "Operation Review Percent (%)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rating_comity_percent",
+   "fieldtype": "Percent",
+   "label": "Rating Committee Percent (%)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "New Contract",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "upon_signature_amount",
+   "fieldtype": "Float",
+   "label": "Upon Signature Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "operation_review_amount",
+   "fieldtype": "Float",
+   "label": "Operation Review Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rating_committee_amount",
+   "fieldtype": "Float",
+   "label": "Rating Committee Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Select",
+   "label": "Transaction Type",
+   "options": "\nSecuritization\nSukuk\nEntity Rating\nCorporate Bond\nCommercial Paper\nFuture Cash Flow\nFinancial Institutions\nOthers",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "contract_date",
+   "fieldtype": "Date",
+   "label": "Contract Date"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "applicant_form.full_address",
+   "fieldname": "full_address",
+   "fieldtype": "Data",
+   "label": "Full Address",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "applicant_form.telephone",
+   "fieldname": "telephone",
+   "fieldtype": "Data",
+   "label": "Telephone",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "applicant_form.fax",
+   "fieldname": "fax",
+   "fieldtype": "Data",
+   "label": "Fax",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "applicant_form.authorized_signatory",
+   "fieldname": "authorized_signatory",
+   "fieldtype": "Data",
+   "label": "Authorized Signatory",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "applicant_form.signatory_titles",
+   "fieldname": "signatory_titles",
+   "fieldtype": "Data",
+   "label": "Title",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Tracker",
+   "link_fieldname": "contract"
+  },
+  {
+   "link_doctype": "Increase Of Fees",
+   "link_fieldname": "contract"
+  },
+  {
+   "link_doctype": "Decrease Of Fees",
+   "link_fieldname": "contract"
+  }
+ ],
+ "modified": "2023-06-14 12:10:35.245105",
+ "modified_by": "Administrator",
+ "module": "Ecs Microfinance",
+ "name": "New Contract",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "client"
+}

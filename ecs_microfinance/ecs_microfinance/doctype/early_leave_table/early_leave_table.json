@@ -1,0 +1,86 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-06-14 13:45:33.364729",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "no_of_early_leave_0",
+  "no_of_early_leave_1",
+  "no_of_early_leave_2",
+  "no_of_early_leave_3",
+  "no_of_early_leave_4",
+  "salary_component"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fetch_from": "shift_type.end_time",
+   "fieldname": "no_of_early_leave_0",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "1st Time"
+  },
+  {
+   "columns": 1,
+   "fieldname": "no_of_early_leave_1",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "2nd Time"
+  },
+  {
+   "columns": 1,
+   "fieldname": "no_of_early_leave_2",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "3rd Time"
+  },
+  {
+   "columns": 1,
+   "fieldname": "no_of_early_leave_3",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "4th Time"
+  },
+  {
+   "columns": 1,
+   "fieldname": "no_of_early_leave_4",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "5th Time"
+  },
+  {
+   "columns": 4,
+   "fieldname": "salary_component",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Salary Component",
+   "options": "Salary Component"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-03 15:56:44.292961",
+ "modified_by": "Administrator",
+ "module": "Ecs Microfinance",
+ "name": "Early Leave Table",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

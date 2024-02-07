@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2023-03-22 14:05:48.849855",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "penalty_date",
+  "raised_by",
+  "against_to",
+  "penalty_type",
+  "penalty_deduction",
+  "notes"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "penalty_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Penalty Date"
+  },
+  {
+   "columns": 2,
+   "fieldname": "raised_by",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Raised By"
+  },
+  {
+   "columns": 2,
+   "fieldname": "against_to",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Against To",
+   "read_only": 1
+  },
+  {
+   "fieldname": "penalty_deduction",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Penalty Deduction(Days)"
+  },
+  {
+   "columns": 2,
+   "fieldname": "notes",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Notes"
+  },
+  {
+   "columns": 2,
+   "fieldname": "penalty_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Penalty Type",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-14 12:10:30.660054",
+ "modified_by": "Administrator",
+ "module": "Ecs Microfinance",
+ "name": "Penalty Logs",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

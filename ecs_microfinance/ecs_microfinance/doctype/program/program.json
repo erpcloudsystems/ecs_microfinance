@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-05-28 20:33:46.037678",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "date",
+  "client",
+  "program_value",
+  "currency",
+  "column_break_4",
+  "first_issuance_amount",
+  "first_issuance_date",
+  "no_of_issuances",
+  "issuance_period__months_"
+ ],
+ "fields": [
+  {
+   "default": "PR-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "PR-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Client",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "program_value",
+   "fieldtype": "Float",
+   "label": "Program Value",
+   "precision": "0",
+   "reqd": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "first_issuance_amount",
+   "fieldtype": "Float",
+   "label": "1st Issuance amount"
+  },
+  {
+   "fieldname": "first_issuance_date",
+   "fieldtype": "Date",
+   "label": "1st Issuance Date"
+  },
+  {
+   "fieldname": "no_of_issuances",
+   "fieldtype": "Float",
+   "label": "No of Issuances",
+   "precision": "0",
+   "reqd": 1
+  },
+  {
+   "fieldname": "issuance_period__months_",
+   "fieldtype": "Float",
+   "label": "Issuance Period ( Months )",
+   "precision": "0",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-14 11:55:25.910096",
+ "modified_by": "Administrator",
+ "module": "Ecs Microfinance",
+ "name": "Program",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

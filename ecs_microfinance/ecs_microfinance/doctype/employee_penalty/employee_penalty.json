@@ -1,0 +1,193 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-03-19 17:14:54.352619",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "penalty_logs",
+  "section_break_3",
+  "raised_by",
+  "raised_byname",
+  "against_to",
+  "against_toname",
+  "date_of_joining",
+  "department",
+  "custom_designation",
+  "branch",
+  "column_break_4",
+  "penalty_date",
+  "salary_component",
+  "penalty_deduction",
+  "notes",
+  "custom_user",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fetch_from": "against_to.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "default": "\u0639\u062f\u062f \u0627\u064a\u0627\u0645 \u0627\u0644\u062c\u0632\u0627\u0621 \u0627\u0644\u0627\u062f\u0627\u0631\u064a",
+   "fieldname": "salary_component",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Salary Component",
+   "options": "Salary Component"
+  },
+  {
+   "fieldname": "penalty_deduction",
+   "fieldtype": "Select",
+   "label": "Penalty Deduction(Days)",
+   "options": "\n0.25\n0.5\n1\n2\n3\n4\n5"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Penalty",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "raised_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Raised By",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "against_to",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Against To",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "against_to.date_of_joining",
+   "fieldname": "date_of_joining",
+   "fieldtype": "Date",
+   "label": "Date Of Joining"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Subject",
+   "reqd": 1
+  },
+  {
+   "default": "EP-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "EP-",
+   "read_only": 1
+  },
+  {
+   "fieldname": "penalty_date",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Penalty Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "penalty_logs",
+   "fieldtype": "Table",
+   "label": "<b style=\"color: red;\">Penalty Logs</b>",
+   "options": "Penalty Logs",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "raised_by.employee_name",
+   "fieldname": "raised_byname",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Raised By(Name)",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "against_to.employee_name",
+   "fieldname": "against_toname",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Against To(Name)",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "against_to.designation",
+   "fieldname": "custom_designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation",
+   "read_only": 1
+  },
+  {
+   "default": "user",
+   "fieldname": "custom_user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User"
+  },
+  {
+   "fetch_from": "against_to.branch",
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-10-17 10:55:19.990470",
+ "modified_by": "Administrator",
+ "module": "Ecs Microfinance",
+ "name": "Employee Penalty",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

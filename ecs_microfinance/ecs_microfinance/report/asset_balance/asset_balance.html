@@ -1,0 +1,192 @@
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        direction: rtl;
+    }
+
+    .print-format {
+        padding: 0in;
+    }
+
+    .header {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .under-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .esm-algeha {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    table,
+    th,
+    td,
+    th {
+        border: 2px solid black;
+        border-collapse: collapse;
+        text-align: center;
+        vertical-align: center !important;
+    }
+
+    .print-format th {
+        color: black;
+        text-align: center;
+        font-weight: bold;
+        background-color: lightgray;
+    }
+
+    .print-format td {
+        padding: 0px !important;
+        vertical-align: center !important;
+    }
+
+    .break {
+        flex-basis: 100%;
+        height: 0;
+    }
+
+    .column1 {
+        border-left: 2px solid black;
+    }
+
+    .table1 {
+        margin-top: 5px;
+        margin-right: 20px;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .print-format td {
+        vertical-align: center !important;
+    }
+
+    .print-format td,
+    .print-format th {
+        vertical-align: center !important;
+    }
+    .header1{
+        text-align:left;
+    }
+    .table1 table {
+        max-width: 100%; /* Set the maximum width to 100% */
+    }
+    hr {
+        margin-top:0px;
+        margin-bottom:0px
+    }
+    .center12{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .signature-row {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px; /* Adjust the margin as needed */
+    }
+</style>
+
+{% let loopsNo = Math.ceil((data.length + 1) / 10) %}
+{% for (var j = 0, f = loopsNo; j < f; j++) { %}
+
+    <div class="header1">
+        <h2 style="text-align:center;">كشف جرد الأصول الثابتة في :{%= filters.to_date %}</h2>
+        <hr>
+        <div style="display: flex; flex-direction:row; justify-content:space-around;">
+            <h6>From Date: {%= filters.from_date %}</h6>
+            <h6>To Date: {%= filters.to_date %}</h6>
+            <h6>مجموعة الاصول:{%= filters.asset_category %}</h6>
+            <h6>مكان التواجد:{%= filters.territory %}</h6>
+        </div>
+        <hr>
+    </div>
+
+    <div class="table1">
+        <table style="font-family: Cairo" dir="rtl">
+            <thead>
+                <tr>
+                    <th>{%= __("#") %}</th>
+                    <th>{%= __("رقم الأصل") %}</th>
+                    <th>{%= __("اسم الأصل - وصف الأصل") %}</th>
+                    <th>{%= __("مجموعة الاصول") %}</th>
+                    <th>{%= __("مكان التواجد") %}</th>
+                    <th>{%= __("تاريخ الشراء") %}</th>
+                    <th>{%= __("حالة الملكية") %}</th>
+                    <th>{%= __("العدد") %}</th>
+                    <th>{%= __("سعر الوحدة") %}</th>
+                    <th>{%= __("الاجمالي") %}</th>
+                    <th>{%= __("العدد الفعلي") %}</th>
+                    <th>{%= __("الفرق") %}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for (var i = 10 * j, ff = Math.min(10 * (j + 1), data.length); i < ff; i++) { %}
+                    <tr>
+                        <td>{%= i + 1 %}</td>
+                        <td>{%= data[i].name %}</td>
+                        <td>{%= data[i].con %}</td>
+                        <td>{%= data[i].asset_category %}</td>
+                        <td>{%= data[i].territory %}</td>
+                        <td>{%= data[i].purchase_date %}</td>
+                        <td>{%= data[i].asset_status %}</td>
+                        <td>{%= data[i].count %}</td>
+                        <td>{%= data[i].item_price %}</td>
+                        <td>{%= data[i].total %}</td>
+                        <td>{%= data[i].count1 %}</td>
+                        <td>{%= data[i].count2 %}</td>
+                    </tr>
+                {% } %}
+            </tbody>
+        </table>
+    </div>
+
+    <div></div>
+    <!-- Table on the left -->
+    <div class="signature-row">
+        <!-- Table on the left -->
+        <table style="align:left" width="200">
+            <tr>
+                <td align="left"><b>التوقيع</b></td>
+            </tr>
+            <tr>
+                <td>.................................</td>
+            </tr>
+        </table>
+    
+        <!-- Table in the center -->
+        <table class="center12" width="200">
+            <tr>
+                <td align="center"><b>التوقيع</b></td>
+            </tr>
+            <tr>
+                <td>.................................</td>
+            </tr>
+        </table>
+    
+        <!-- Table on the right -->
+        <table style="align:right" width="200">
+            <tr>
+                <td align="right"><b>التوقيع</b></td>
+            </tr>
+            <tr>
+                <td>.................................</td>
+            </tr>
+        </table>
+    </div>
+    
+    <p style="page-break-after: always;">&nbsp;&nbsp;&nbsp;</p>    
+
+{% } %}

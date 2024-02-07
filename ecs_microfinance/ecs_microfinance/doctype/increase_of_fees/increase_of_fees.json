@@ -1,0 +1,184 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-04-02 11:16:26.244026",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "section_break_2",
+  "contract",
+  "applicant",
+  "applicant_authorized_party",
+  "title",
+  "column_break_7",
+  "posting_date",
+  "address",
+  "telephone",
+  "fax",
+  "amended_from",
+  "section_break_13",
+  "current_bond_size",
+  "bond_currency",
+  "new_bond_size",
+  "column_break_16",
+  "new_initial_amount",
+  "new_renewal_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "IOF-"
+  },
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contract",
+   "options": "New Contract",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Increase Of Fees",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "contract.client",
+   "fieldname": "applicant",
+   "fieldtype": "Link",
+   "label": "Applicant",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "contract.authorized_signatory",
+   "fieldname": "applicant_authorized_party",
+   "fieldtype": "Data",
+   "label": "Applicant Authorized Party",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "contract.signatory_titles",
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fetch_from": "contract.full_address",
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "contract.telephone",
+   "fieldname": "telephone",
+   "fieldtype": "Data",
+   "label": "Telephone",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "contract.fax",
+   "fieldname": "fax",
+   "fieldtype": "Data",
+   "label": "Fax",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "contract.bond_size",
+   "fieldname": "current_bond_size",
+   "fieldtype": "Float",
+   "label": "Current Bond Size",
+   "read_only": 1
+  },
+  {
+   "fieldname": "new_bond_size",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "New Bond Size",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "new_initial_amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "New Initial Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "new_renewal_amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "New Renewal Amount",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "contract.bond_currency",
+   "fieldname": "bond_currency",
+   "fieldtype": "Link",
+   "label": "Bond Currency",
+   "options": "Currency",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-14 12:10:36.042015",
+ "modified_by": "Administrator",
+ "module": "Ecs Microfinance",
+ "name": "Increase Of Fees",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

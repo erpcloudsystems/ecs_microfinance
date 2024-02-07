@@ -1,0 +1,236 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-04-10 14:17:48.316638",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "department",
+  "designation",
+  "branch",
+  "territory",
+  "get_employees",
+  "column_break_6",
+  "posting_date",
+  "employee",
+  "employee_name",
+  "contract_end_date",
+  "section_break_11",
+  "potential_successors_department",
+  "potential_successors_designation",
+  "column_break_rleib",
+  "potential_successors_branch",
+  "potential_successors_territory",
+  "get_employee",
+  "section_break_12",
+  "succession_planning_table",
+  "section_break_wbwbj",
+  "potential_successor",
+  "action",
+  "column_break_kdsuu",
+  "go_to_comparison",
+  "go_to_development_request",
+  "go_to_transfer_request",
+  "go_to_promotion_request",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "SP-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "SP-"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break",
+   "label": "Potential successors"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "succession_planning_table",
+   "fieldtype": "Table",
+   "label": "Succession Planning Table",
+   "options": "Succession Planning Table"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Succession Planning",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "get_employee",
+   "fieldtype": "Button",
+   "label": "<b style=\"color: red;\">Get Candidate Employees</b>"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "label": "Territory",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "potential_successors_department",
+   "fieldtype": "Link",
+   "label": "Potential successors Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "potential_successors_branch",
+   "fieldtype": "Link",
+   "label": "Potential successors Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "potential_successors_territory",
+   "fieldtype": "Link",
+   "label": "Potential successors Territory",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "potential_successors_designation",
+   "fieldtype": "Link",
+   "label": "Potential successors Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "column_break_rleib",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "get_employees",
+   "fieldtype": "Button",
+   "label": "<b style=\"color: red;\">Get employees</b>"
+  },
+  {
+   "fieldname": "contract_end_date",
+   "fieldtype": "Date",
+   "label": "Contract End Date",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "potential_successor",
+   "fieldtype": "Link",
+   "label": "Potential successor",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "section_break_wbwbj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "action",
+   "fieldtype": "Select",
+   "label": "Action",
+   "options": "\nComparison\nDevelopment Request\nTransfer Request\nPromotion Request"
+  },
+  {
+   "depends_on": "eval:doc.action == \"Comparison\"",
+   "fieldname": "go_to_comparison",
+   "fieldtype": "Button",
+   "label": "<b style=\"color: red;\">Go To Comparison</b>"
+  },
+  {
+   "depends_on": "eval:doc.action == \"Development Request\"",
+   "fieldname": "go_to_development_request",
+   "fieldtype": "Button",
+   "label": "<b style=\"color: red;\">Go To Development Request</b>"
+  },
+  {
+   "depends_on": "eval:doc.action == \"Transfer Request\"",
+   "fieldname": "go_to_transfer_request",
+   "fieldtype": "Button",
+   "label": "<b style=\"color: red;\">Go To Transfer Request</b>"
+  },
+  {
+   "depends_on": "eval:doc.action == \"Promotion Request\"",
+   "fieldname": "go_to_promotion_request",
+   "fieldtype": "Button",
+   "label": "<b style=\"color: red;\">Go To Promotion Request</b>"
+  },
+  {
+   "fieldname": "column_break_kdsuu",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-28 17:30:15.675409",
+ "modified_by": "Administrator",
+ "module": "Ecs Microfinance",
+ "name": "Succession Planning",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

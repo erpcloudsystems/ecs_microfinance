@@ -1,0 +1,67 @@
+{
+ "charts": [],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Meris</span>\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Applicant Information Form\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Contract\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tracker\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Tracker Template\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Increase Of Fees\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Decrease Of Fees\",\"col\":3}}]",
+ "creation": "2023-04-02 10:55:04.557430",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "idx": 0,
+ "label": "Meris",
+ "links": [],
+ "modified": "2023-04-09 15:28:51.995133",
+ "modified_by": "a.ashram@erpcloud.systems",
+ "module": "Ecs Finbi",
+ "name": "Meris",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 35.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Applicant Information Form",
+   "link_to": "Applicant Information Form",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Increase Of Fees",
+   "link_to": "Increase Of Fees",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "New Contract",
+   "link_to": "New Contract",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Decrease Of Fees",
+   "link_to": "Decrease Of Fees",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Tracker",
+   "link_to": "Tracker",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Tracker Template",
+   "link_to": "Tracker Template",
+   "type": "DocType"
+  }
+ ],
+ "title": "Meris"
+}

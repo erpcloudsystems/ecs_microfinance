@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2023-06-14 12:28:33.893916",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "training_start_date",
+  "training_end_date",
+  "employment_type",
+  "new_employment_type"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "training_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Training Start Date"
+  },
+  {
+   "fieldname": "training_end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Training End Date"
+  },
+  {
+   "fieldname": "employment_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Employment Type"
+  },
+  {
+   "columns": 2,
+   "fieldname": "new_employment_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "New Employment Type",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-14 12:28:33.893916",
+ "modified_by": "Administrator",
+ "module": "Ecs Microfinance",
+ "name": "Training Before Joining Logs",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

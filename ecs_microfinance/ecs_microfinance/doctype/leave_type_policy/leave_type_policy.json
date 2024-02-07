@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2023-05-14 09:48:29.106510",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "from",
+  "to",
+  "number_of_days_before"
+ ],
+ "fields": [
+  {
+   "fieldname": "from",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "From",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "to",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "To"
+  },
+  {
+   "fetch_from": "employee.department",
+   "fieldname": "number_of_days_before",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Number Of Days Before"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-14 12:10:26.218243",
+ "modified_by": "Administrator",
+ "module": "Ecs Microfinance",
+ "name": "Leave Type Policy",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

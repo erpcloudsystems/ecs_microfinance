@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-05-10 14:17:29.660608",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "designation",
+  "no_of_positions",
+  "expected_salary"
+ ],
+ "fields": [
+  {
+   "default": "JRD-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "JRD-"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "no_of_positions",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "No of. Positions"
+  },
+  {
+   "fetch_from": "shift_type.end_time",
+   "fieldname": "expected_salary",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Expected Salary"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-14 12:10:24.720011",
+ "modified_by": "Administrator",
+ "module": "Ecs Microfinance",
+ "name": "Job Request Detail",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

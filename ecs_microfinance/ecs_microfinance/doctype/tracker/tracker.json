@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-03-29 14:12:17.676454",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "section_break_2",
+  "contract",
+  "issuer",
+  "column_break_4",
+  "applicant_form",
+  "tracker_template",
+  "section_break_8",
+  "tasks_table",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "TRKR-"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Contract",
+   "options": "New Contract"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "issuer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Issuer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "tracker_template",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Tracker Template",
+   "options": "Tracker Template"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tasks_table",
+   "fieldtype": "Table",
+   "label": "Tasks Table",
+   "options": "Tasks Table"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Tracker",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "applicant_form",
+   "fieldtype": "Link",
+   "label": "Applicant Form",
+   "options": "Applicant Information Form"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-14 12:10:36.601001",
+ "modified_by": "Administrator",
+ "module": "Ecs Microfinance",
+ "name": "Tracker",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "issuer",
+ "track_changes": 1
+}

@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2023-02-26 17:20:29.537747",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date_of_joining",
+  "current_contract_end_date",
+  "renewal_period",
+  "new_contract_start_date",
+  "new_contract_end_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "date_of_joining",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Date of Joining"
+  },
+  {
+   "fieldname": "current_contract_end_date",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Current Contract End Date"
+  },
+  {
+   "fieldname": "renewal_period",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Renewal Period (In Months)"
+  },
+  {
+   "fieldname": "new_contract_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "New Contract Start Date"
+  },
+  {
+   "fieldname": "new_contract_end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "New Contract End Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-14 12:10:37.755904",
+ "modified_by": "Administrator",
+ "module": "Ecs Microfinance",
+ "name": "Contract History Logs",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

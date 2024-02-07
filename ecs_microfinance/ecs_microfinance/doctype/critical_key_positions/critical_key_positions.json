@@ -1,0 +1,125 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-24 13:10:29.563872",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "department",
+  "designation",
+  "column_break_figrd",
+  "critical_key",
+  "get_designation",
+  "section_break_x8ksr",
+  "designation_critical_key",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "CKP-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "CKP-"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "column_break_figrd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "critical_key",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Critical Key",
+   "options": "Critical Key"
+  },
+  {
+   "fieldname": "get_designation",
+   "fieldtype": "Button",
+   "label": "Get Designation"
+  },
+  {
+   "fieldname": "section_break_x8ksr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "designation_critical_key",
+   "fieldtype": "Table",
+   "label": "Designation Critical Key",
+   "options": "Designation Critical Key"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Critical Key Positions",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-28 16:56:11.748473",
+ "modified_by": "Administrator",
+ "module": "Ecs Microfinance",
+ "name": "Critical Key Positions",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

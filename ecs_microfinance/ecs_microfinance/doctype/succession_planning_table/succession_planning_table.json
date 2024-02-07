@@ -1,0 +1,137 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-10 14:17:26.836542",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "designation",
+  "department",
+  "criticality_level",
+  "column_break_5",
+  "performance_level",
+  "potential_level",
+  "readiness_level",
+  "gaps_in_competencies",
+  "developmental_plan_to_bridge_gaps"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Employee Name"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "employee.designation",
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "employee.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "readiness_level",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Readiness level"
+  },
+  {
+   "columns": 2,
+   "fieldname": "gaps_in_competencies",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Gaps In Competencies"
+  },
+  {
+   "fieldname": "performance_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Performance level",
+   "options": "\n\u0636\u0639\u064a\u0641 \u0627\u0644\u0627\u062f\u0627\u0621\n\u0645\u0624\u062f\u064a \u0648\u062c\u064a\u062f\n\u0645\u0624\u062f\u064a \u0648\u0642\u0648\u064a"
+  },
+  {
+   "columns": 2,
+   "fieldname": "potential_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Potential level",
+   "options": "\n\u0645\u0646\u0627\u0633\u0628 \u0644\u0644\u062f\u0648\u0631 \u0627\u0644\u0648\u0638\u064a\u0641\u0649 \u0627\u0644\u062d\u0627\u0644\u064a \u0641\u0642\u0637\n\u0645\u0646\u0627\u0633\u0628 \u062c\u064a\u062f \u0628\u0627\u0644\u062f\u0648\u0631 \u0627\u0644\u0648\u0638\u064a\u0641\u0649 \u0627\u0644\u062d\u0627\u0644\u064a\u060c \u0645\u0639 \u0625\u0645\u0643\u0627\u0646\u064a\u0629 \u0627\u0644\u062a\u0635\u0639\u064a\u062f \u0644\u062f\u0631\u062c\u0629 \u0648\u0638\u064a\u0641\u064a\u0629 \u0648\u0627\u062d\u062f\u0629\n\u0645\u0646\u0627\u0633\u0628 \u062c\u064a\u062f \u0628\u0627\u0644\u062f\u0648\u0631 \u0627\u0644\u0648\u0638\u064a\u0641\u0649 \u0627\u0644\u062d\u0627\u0644\u064a\u060c \u0645\u0639 \u0625\u0645\u0643\u0627\u0646\u064a\u0629 \u0627\u0644\u062a\u0635\u0639\u064a\u062f \u0644\u0627\u0643\u062b\u0631 \u0645\u0646 \u062f\u0631\u062c\u0629 \u0648\u0638\u064a\u0641\u064a\u0629"
+  },
+  {
+   "columns": 1,
+   "fieldname": "developmental_plan_to_bridge_gaps",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Developmental Plan to Bridge Gaps"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "designation.custom_critical_key",
+   "fieldname": "criticality_level",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "criticality level",
+   "options": "Critical Key"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-28 15:18:28.805963",
+ "modified_by": "Administrator",
+ "module": "Ecs Microfinance",
+ "name": "Succession Planning Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

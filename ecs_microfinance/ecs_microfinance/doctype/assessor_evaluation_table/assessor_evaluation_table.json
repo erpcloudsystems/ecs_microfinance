@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2024-02-04 14:53:27.170264",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "competencies",
+  "target",
+  "achieved",
+  "percentage"
+ ],
+ "fields": [
+  {
+   "columns": 4,
+   "fieldname": "competencies",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Competencies",
+   "oldfieldname": "kra",
+   "oldfieldtype": "Small Text",
+   "print_width": "240px",
+   "reqd": 1,
+   "width": "240px"
+  },
+  {
+   "columns": 2,
+   "fieldname": "target",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Target",
+   "precision": "1"
+  },
+  {
+   "columns": 2,
+   "fieldname": "achieved",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Achieved",
+   "precision": "1"
+  },
+  {
+   "columns": 2,
+   "fieldname": "percentage",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Percentage",
+   "precision": "1"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2024-02-04 15:18:25.036807",
+ "modified_by": "Administrator",
+ "module": "Ecs Microfinance",
+ "name": "Assessor Evaluation Table",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
