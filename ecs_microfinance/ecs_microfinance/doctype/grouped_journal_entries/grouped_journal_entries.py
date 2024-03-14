@@ -46,7 +46,7 @@ class GroupedJournalEntries(Document):
             # ):
 
             if abs(debit - to_decimal(account_log.debit)) > Decimal("0.00001"):
-                frappe.throw(
+                frappe.msgprint(
                     "Account Checking is {0}, <br>  debit: {1},  <br>  entries for this account is <br>  debit: {2} <br>  percent: {3}%. <br> Please Check Above Values and Resubmit".format(
                         account_log.account,
                         account_log.debit,

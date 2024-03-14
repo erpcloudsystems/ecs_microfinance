@@ -1,0 +1,170 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-26 16:53:25.653381",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "designation",
+  "department",
+  "column_break_sbir",
+  "date_of_joining",
+  "last_working_date",
+  "insurance_status",
+  "section_break_utva",
+  "basic_salary",
+  "salary_component",
+  "column_break_pf7z",
+  "allowances",
+  "section_break_q1s9",
+  "total_leave_balance",
+  "used_leave",
+  "column_break_5hcu",
+  "remaining_leaves",
+  "leaves_allowance_amount",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_q1s9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "End of Service",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.designation",
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.date_of_joining",
+   "fieldname": "date_of_joining",
+   "fieldtype": "Date",
+   "label": "Date of Joining",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_leave_balance",
+   "fieldtype": "Float",
+   "label": "Total Leave Balance"
+  },
+  {
+   "fieldname": "used_leave",
+   "fieldtype": "Float",
+   "label": "Used Leave"
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remaining_leaves",
+   "fieldtype": "Float",
+   "label": "Remaining Leaves"
+  },
+  {
+   "fieldname": "column_break_sbir",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_5hcu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_working_date",
+   "fieldtype": "Date",
+   "label": "Last Working Date"
+  },
+  {
+   "fieldname": "section_break_utva",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "basic_salary",
+   "fieldtype": "Currency",
+   "label": "Basic Salary"
+  },
+  {
+   "fieldname": "column_break_pf7z",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "allowances",
+   "fieldtype": "Currency",
+   "label": "Allowances"
+  },
+  {
+   "fieldname": "salary_component",
+   "fieldtype": "Link",
+   "label": "Salary Component",
+   "options": "Salary Component"
+  },
+  {
+   "fieldname": "leaves_allowance_amount",
+   "fieldtype": "Currency",
+   "label": "Leaves Allowance Amount"
+  },
+  {
+   "fieldname": "insurance_status",
+   "fieldtype": "Select",
+   "label": "Insurance Status",
+   "options": "\u0645\u0624\u0645\u0646\n\u063a\u064a\u0631 \u0645\u0624\u0645\u0646"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-03-06 11:22:59.940345",
+ "modified_by": "Administrator",
+ "module": "Ecs Microfinance",
+ "name": "End of Service",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

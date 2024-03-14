@@ -42,5 +42,6 @@ frappe.query_reports["Attendance Details"] = {
 			fieldtype: "Link",
 			options:"Department",
 		},
+		
 	]
 }

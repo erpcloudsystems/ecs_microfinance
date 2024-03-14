@@ -103,6 +103,7 @@ def get_item_price_qty_data(filters):
                     where
                         `tabEmployee`.status="Active"   
                 {conditions}
+                    ORDER BY health_insurance_no ASC
 
 
                 """.format(conditions=conditions), filters, as_dict=1)

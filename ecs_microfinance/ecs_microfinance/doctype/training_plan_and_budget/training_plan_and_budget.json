@@ -1,0 +1,248 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-03-13 17:43:16.203163",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "description",
+  "preparation_table",
+  "column_break_3",
+  "posting_date",
+  "department",
+  "branch",
+  "territory",
+  "governorate",
+  "get_employee",
+  "section_break_5",
+  "training_need_table",
+  "budget_tab",
+  "total_expenses_section",
+  "trainer_fees",
+  "test_fees",
+  "administrative_fees",
+  "training_material_fees",
+  "column_break_atsq",
+  "training_tools_fees",
+  "transportation_fees",
+  "housing_fees",
+  "exam_certificate_fees",
+  "others",
+  "section_break_is1y",
+  "budget_duration",
+  "column_break_p6b6",
+  "calculate",
+  "section_break_gzbo",
+  "training_budget_table",
+  "total_budget",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "TN-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "TN-"
+  },
+  {
+   "fieldname": "training_need_table",
+   "fieldtype": "Table",
+   "label": "Training Need Table",
+   "options": "Training Need Table"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Training Plan And Budget",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "get_employee",
+   "fieldtype": "Button",
+   "label": "Get Employee"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Territory",
+   "options": "Territory",
+   "read_only": 1
+  },
+  {
+   "fieldname": "budget_tab",
+   "fieldtype": "Tab Break",
+   "label": "Budget"
+  },
+  {
+   "fieldname": "budget_duration",
+   "fieldtype": "Select",
+   "label": "Budget Duration",
+   "options": "\n\u0627\u0644\u0631\u0628\u0639 \u0627\u0644\u0633\u0646\u0648\u064a \u0627\u0644\u0627\u0648\u0644\n\u0627\u0644\u0631\u0628\u0639 \u0627\u0644\u0633\u0646\u0648\u064a \u0627\u0644\u062b\u0627\u0646\u064a\n\u0627\u0644\u0631\u0628\u0639 \u0627\u0644\u0633\u0646\u0648\u064a \u0627\u0644\u062b\u0627\u0644\u062b\n\u0627\u0644\u0631\u0628\u0639 \u0627\u0644\u0633\u0646\u0648\u064a \u0627\u0644\u0631\u0627\u0628\u0639"
+  },
+  {
+   "fieldname": "training_budget_table",
+   "fieldtype": "Table",
+   "label": "Training Budget Table",
+   "options": "Training Budget Table"
+  },
+  {
+   "fieldname": "total_budget",
+   "fieldtype": "Currency",
+   "label": "Total Budget"
+  },
+  {
+   "fieldname": "preparation_table",
+   "fieldtype": "Table",
+   "label": "Preparation Table",
+   "options": "Preparation Table"
+  },
+  {
+   "fieldname": "governorate",
+   "fieldtype": "Link",
+   "label": "Governorate",
+   "options": "Governorate"
+  },
+  {
+   "fieldname": "trainer_fees",
+   "fieldtype": "Currency",
+   "label": "Trainer Fees"
+  },
+  {
+   "fieldname": "test_fees",
+   "fieldtype": "Currency",
+   "label": "Test Fees"
+  },
+  {
+   "fieldname": "administrative_fees",
+   "fieldtype": "Currency",
+   "label": "Administrative Fees"
+  },
+  {
+   "fieldname": "training_material_fees",
+   "fieldtype": "Currency",
+   "label": "Training Material Fees"
+  },
+  {
+   "fieldname": "training_tools_fees",
+   "fieldtype": "Currency",
+   "label": "Training Tools Fees"
+  },
+  {
+   "fieldname": "transportation_fees",
+   "fieldtype": "Currency",
+   "label": "Transportation Fees"
+  },
+  {
+   "fieldname": "housing_fees",
+   "fieldtype": "Currency",
+   "label": "Housing Fees"
+  },
+  {
+   "fieldname": "exam_certificate_fees",
+   "fieldtype": "Currency",
+   "label": "exam certificate fees"
+  },
+  {
+   "fieldname": "others",
+   "fieldtype": "Currency",
+   "label": "Others"
+  },
+  {
+   "fieldname": "total_expenses_section",
+   "fieldtype": "Section Break",
+   "label": "Total Expenses "
+  },
+  {
+   "fieldname": "section_break_is1y",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_atsq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_p6b6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "calculate",
+   "fieldtype": "Button",
+   "label": "<b style=\"color: red;\">Calculate</b>"
+  },
+  {
+   "fieldname": "section_break_gzbo",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-03-14 15:15:52.478685",
+ "modified_by": "Administrator",
+ "module": "Ecs Microfinance",
+ "name": "Training Plan And Budget",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_seen": 1,
+ "track_views": 1
+}

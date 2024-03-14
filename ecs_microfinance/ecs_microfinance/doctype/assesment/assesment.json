@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-20 13:40:27.801685",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "training_event",
+  "check_npxf",
+  "lll"
+ ],
+ "fields": [
+  {
+   "fieldname": "training_event",
+   "fieldtype": "Link",
+   "label": "Training Event",
+   "options": "Training Event"
+  },
+  {
+   "default": "0",
+   "fieldname": "check_npxf",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "lll",
+   "fieldtype": "Icon",
+   "label": "lll"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-20 14:57:17.441263",
+ "modified_by": "Administrator",
+ "module": "Ecs Microfinance",
+ "name": "Assesment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

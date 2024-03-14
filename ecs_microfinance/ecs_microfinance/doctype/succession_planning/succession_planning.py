@@ -13,7 +13,7 @@ class SuccessionPlanning(Document):
 			potential_successors_designation = doc.potential_successors_designation
 			potential_successors_branch = doc.potential_successors_branch
 			potential_successors_department = doc.potential_successors_department
-			potential_successors_territory = doc.potential_successors_territory
+			potential_successors_governorate = doc.potential_successors_governorate
 
 			if potential_successors_designation:
 				condition += f"AND `tabEmployee`.designation = '{potential_successors_designation}'"
@@ -23,12 +23,12 @@ class SuccessionPlanning(Document):
 			if potential_successors_department:
 				condition += f"AND `tabEmployee`.department = '{potential_successors_department}'"
 			
-			if potential_successors_territory:
-				condition +=f"AND `tabEmployee`.territory = '{potential_successors_territory}'"
+			if potential_successors_governorate:
+				condition +=f"AND `tabEmployee`.governorate = '{potential_successors_governorate}'"
 			
 			selected_employee = frappe.db.sql("""
 			select `tabEmployee`.name as name, `tabEmployee`.employee_name as employee_name, `tabEmployee`.department as potential_successors_department,
-			 `tabEmployee`.designation as potential_successors_designation, `tabEmployee`.territory as potential_successors_territory, `tabEmployee`.branch as potential_successors_branch
+			 `tabEmployee`.designation as potential_successors_designation, `tabEmployee`.governorate as potential_successors_governorate, `tabEmployee`.branch as potential_successors_branch
 			from `tabEmployee`
 			where `tabEmployee`.status = "Active"
 		
@@ -52,7 +52,7 @@ class SuccessionPlanning(Document):
 		selected_employee = {}
 		if doc.designation:
 			condition = ""
-			territory = doc.territory
+			governorate = doc.governorate
 			branch = doc.branch
 			department = doc.department
 			designation = doc.designation
@@ -65,12 +65,12 @@ class SuccessionPlanning(Document):
 			if department:
 				condition += f"AND `tabEmployee`.department = '{department}'"
 			
-			if territory:
-				condition +=f"AND `tabEmployee`.territory = '{territory}'"
+			if governorate:
+				condition +=f"AND `tabEmployee`.governorate = '{governorate}'"
 			
 			selected_employee = frappe.db.sql("""
 			select `tabEmployee`.name as name, `tabEmployee`.employee_name as employee_name, `tabEmployee`.department as department,
-			 `tabEmployee`.designation as designation, `tabEmployee`.territory as territory, `tabEmployee`.branch as branch, `tabEmployee`.contract_end_date as contract_end_date
+			 `tabEmployee`.designation as designation, `tabEmployee`.governorate as governorate, `tabEmployee`.branch as branch, `tabEmployee`.contract_end_date as contract_end_date
 			from `tabEmployee`
 			where `tabEmployee`.status = "Active"
 		

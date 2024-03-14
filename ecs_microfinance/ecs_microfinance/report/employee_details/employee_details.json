@@ -1,0 +1,72 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2024-03-04 14:18:08.036822",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "MF LETTER",
+ "letterhead": null,
+ "modified": "2024-03-04 14:18:08.036822",
+ "modified_by": "Administrator",
+ "module": "Ecs Microfinance",
+ "name": "Employee Details",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Employee",
+ "report_name": "Employee Details",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "HR User"
+  },
+  {
+   "role": "Department Manager"
+  },
+  {
+   "role": "Credit Department Manager"
+  },
+  {
+   "role": "Branch Manager"
+  },
+  {
+   "role": "Deputy Managing Director"
+  },
+  {
+   "role": "Area Credit Manager"
+  },
+  {
+   "role": "Governorate Credit Manager"
+  },
+  {
+   "role": "Financial and Administrative Supervisor"
+  },
+  {
+   "role": "IT Manager"
+  },
+  {
+   "role": "IT Specialist"
+  },
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "Governorate Observer"
+  },
+  {
+   "role": "Governorate Systems Supervisor"
+  },
+  {
+   "role": "HR Manager"
+  },
+  {
+   "role": "Leave Approver"
+  }
+ ]
+}

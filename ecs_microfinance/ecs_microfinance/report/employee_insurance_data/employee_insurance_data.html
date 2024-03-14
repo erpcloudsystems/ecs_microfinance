@@ -1,5 +1,15 @@
 <!-- <link rel="stylesheet" type="text/css" media="print" href="print-styles.css"> -->
     <style>
+        @font-face {
+            font-family: "Noto Sans Indic Siyaq Numbers";
+            src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+Indic+Siyaq+Numbers&display=swap");
+        }
+        .num{
+            font-family: Arial !important;
+        }
+    </style>   
+    <script src="employee_insurance_data.js"> </script>
+    <style>
         @media print {
             .headerRow h6 {
                 font-size: 10px; /* Adjust font size for printing */
@@ -16,8 +26,7 @@
 
     /* Add other print-specific styles as needed */
         }
-
-
+  
         *{
             margin: 0;
             padding: 0;
@@ -208,18 +217,19 @@
                 </thead>
                 <tbody>
                     {% for (var i = 10 * j, ff = Math.min(10 * (j + 1), data.length); i < ff; i++) { %}
-                    <tr><td>{%= data[i].health_insurance_no %}</td>
+                    <tr>
+                        <td>{%= data[i].health_insurance_no %}</td>
                         <td>{%= data[i].employee_name %}</td>
-                        <td>{%= data[i].national_id %}</td>
+                        <td class="num">{%= convertToArabic(data[i].national_id) %}</td>
                         <td>{%= data[i].date_of_joining %}</td>
                         <td>{%= data[i].gender %}</td>
-                        <td>{%= data[i].insurance_salary_cent %}</td>
-                        <td>{%= data[i].insurance_salary_pound %}</td>
-                        <td>{%= data[i].gross_salsry_cent %}</td>
-                        <td>{%= data[i].gross_salsry_pound %}</td>
+                        <td>{%= convertToArabic(data[i].insurance_salary_cent) %}</td>
+                        <td>{%= convertToArabic(data[i].insurance_salary_pound) %}</td>
+                        <td>{%= convertToArabic(data[i].gross_salsry_cent) %}</td>
+                        <td>{%= convertToArabic(data[i].gross_salsry_pound) %}</td>
                     </tr>
                     {% } %}
-                </tbody>
+                </tbody>                
             </table>
 
             <div class="footer">

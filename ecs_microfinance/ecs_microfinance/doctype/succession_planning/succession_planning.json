@@ -11,7 +11,7 @@
   "department",
   "designation",
   "branch",
-  "territory",
+  "governorate",
   "get_employees",
   "column_break_6",
   "posting_date",
@@ -23,16 +23,16 @@
   "potential_successors_designation",
   "column_break_rleib",
   "potential_successors_branch",
-  "potential_successors_territory",
+  "potential_successors_governorate",
   "get_employee",
   "section_break_12",
   "succession_planning_table",
   "section_break_wbwbj",
   "potential_successor",
-  "action",
-  "column_break_kdsuu",
+  "section_break_5y6b",
   "go_to_comparison",
   "go_to_development_request",
+  "column_break_kdsuu",
   "go_to_transfer_request",
   "go_to_promotion_request",
   "amended_from"
@@ -111,12 +111,6 @@
    "options": "Branch"
   },
   {
-   "fieldname": "territory",
-   "fieldtype": "Link",
-   "label": "Territory",
-   "options": "Territory"
-  },
-  {
    "fieldname": "potential_successors_department",
    "fieldtype": "Link",
    "label": "Potential successors Department",
@@ -127,12 +121,6 @@
    "fieldtype": "Link",
    "label": "Potential successors Branch",
    "options": "Branch"
-  },
-  {
-   "fieldname": "potential_successors_territory",
-   "fieldtype": "Link",
-   "label": "Potential successors Territory",
-   "options": "Territory"
   },
   {
    "fieldname": "potential_successors_designation",
@@ -172,32 +160,21 @@
    "fieldtype": "Section Break"
   },
   {
-   "allow_on_submit": 1,
-   "fieldname": "action",
-   "fieldtype": "Select",
-   "label": "Action",
-   "options": "\nComparison\nDevelopment Request\nTransfer Request\nPromotion Request"
-  },
-  {
-   "depends_on": "eval:doc.action == \"Comparison\"",
    "fieldname": "go_to_comparison",
    "fieldtype": "Button",
    "label": "<b style=\"color: red;\">Go To Comparison</b>"
   },
   {
-   "depends_on": "eval:doc.action == \"Development Request\"",
    "fieldname": "go_to_development_request",
    "fieldtype": "Button",
    "label": "<b style=\"color: red;\">Go To Development Request</b>"
   },
   {
-   "depends_on": "eval:doc.action == \"Transfer Request\"",
    "fieldname": "go_to_transfer_request",
    "fieldtype": "Button",
    "label": "<b style=\"color: red;\">Go To Transfer Request</b>"
   },
   {
-   "depends_on": "eval:doc.action == \"Promotion Request\"",
    "fieldname": "go_to_promotion_request",
    "fieldtype": "Button",
    "label": "<b style=\"color: red;\">Go To Promotion Request</b>"
@@ -205,12 +182,28 @@
   {
    "fieldname": "column_break_kdsuu",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "potential_successors_governorate",
+   "fieldtype": "Link",
+   "label": "Potential successors Governorate",
+   "options": "Governorate"
+  },
+  {
+   "fieldname": "governorate",
+   "fieldtype": "Link",
+   "label": "Governorate",
+   "options": "Governorate"
+  },
+  {
+   "fieldname": "section_break_5y6b",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-01-28 17:30:15.675409",
+ "modified": "2024-03-14 14:41:20.426498",
  "modified_by": "Administrator",
  "module": "Ecs Microfinance",
  "name": "Succession Planning",

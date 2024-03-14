@@ -13,7 +13,7 @@
   "department",
   "designation",
   "section_break_5",
-  "description"
+  "employee_boarding_tasks"
  ],
  "fields": [
   {
@@ -54,14 +54,15 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "description",
-   "fieldtype": "Text Editor",
-   "label": "Description"
+   "fieldname": "employee_boarding_tasks",
+   "fieldtype": "Table",
+   "label": "Employee Boarding Tasks",
+   "options": "Employee Boarding Tasks"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-14 12:10:30.161330",
+ "modified": "2024-03-06 13:56:04.661820",
  "modified_by": "Administrator",
  "module": "Ecs Microfinance",
  "name": "Onboarding Task",

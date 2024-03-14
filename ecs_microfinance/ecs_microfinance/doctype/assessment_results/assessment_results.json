@@ -1,0 +1,124 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-22 11:19:10.610058",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "training_event",
+  "submitting_datetime",
+  "user",
+  "section_break_ielj",
+  "question",
+  "trainee_answer",
+  "correct_answer",
+  "result",
+  "mark",
+  "total_marks",
+  "section_break_v9ub",
+  "assessment_results_schedule",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ielj",
+   "fieldtype": "Section Break",
+   "label": "Answers Section"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Assessment Results",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "training_event",
+   "fieldtype": "Link",
+   "label": "Training Event",
+   "options": "Training Event"
+  },
+  {
+   "fieldname": "submitting_datetime",
+   "fieldtype": "Datetime",
+   "label": "Submitting DateTime"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User"
+  },
+  {
+   "fieldname": "question",
+   "fieldtype": "Link",
+   "label": "Question",
+   "options": "LMS Question"
+  },
+  {
+   "fieldname": "trainee_answer",
+   "fieldtype": "Data",
+   "label": "Trainee Answer "
+  },
+  {
+   "fieldname": "correct_answer",
+   "fieldtype": "Data",
+   "label": "Correct Answer"
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Select",
+   "label": "Result",
+   "options": "\nCorrect\nFalse"
+  },
+  {
+   "fieldname": "mark",
+   "fieldtype": "Float",
+   "label": "Mark"
+  },
+  {
+   "fieldname": "total_marks",
+   "fieldtype": "Data",
+   "label": "Total Marks"
+  },
+  {
+   "fieldname": "section_break_v9ub",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "assessment_results_schedule",
+   "fieldtype": "Table",
+   "label": "Assessment Results Schedule",
+   "options": "Assessment Results Schedule"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-02-22 14:26:09.524325",
+ "modified_by": "Administrator",
+ "module": "Ecs Microfinance",
+ "name": "Assessment Results",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

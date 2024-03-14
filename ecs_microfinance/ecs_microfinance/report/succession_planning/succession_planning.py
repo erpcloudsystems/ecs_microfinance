@@ -39,6 +39,18 @@ def get_column():
             "fieldtype": "Data",
             "width": 150
         },
+        {
+            "fieldname": "governorate",
+            "label": "Governorate",
+            "fieldtype": "Data",
+            "width": 150
+        },
+        {
+            "fieldname": "branch",
+            "label": "Branch",
+            "fieldtype": "Data",
+            "width": 150
+        },
 
         {
             "fieldname": "performance_level",
@@ -80,6 +92,8 @@ def get_data(filters):
     data = frappe.db.sql("""
                 select sp.name,
                 spt.department as department,
+                sp.potential_successors_governorate as governorate,
+                sp.potential_successors_branch as branch,
                 spt.designation as designation,
                 spt.employee_name as employee_name,
                 spt.employee as employee,

@@ -1,0 +1,56 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-22 14:23:32.257009",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "question",
+  "trainee_answer",
+  "correct_answer",
+  "result",
+  "mark"
+ ],
+ "fields": [
+  {
+   "fieldname": "question",
+   "fieldtype": "Link",
+   "label": "Question",
+   "options": "LMS Question"
+  },
+  {
+   "fieldname": "trainee_answer",
+   "fieldtype": "Data",
+   "label": "Trainee Answer "
+  },
+  {
+   "fieldname": "correct_answer",
+   "fieldtype": "Data",
+   "label": "Correct Answer"
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Select",
+   "label": "Result",
+   "options": "\nCorrect\nFalse"
+  },
+  {
+   "fieldname": "mark",
+   "fieldtype": "Float",
+   "label": "Mark"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-02-22 14:25:12.523751",
+ "modified_by": "Administrator",
+ "module": "Ecs Microfinance",
+ "name": "Assessment Results Schedule",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

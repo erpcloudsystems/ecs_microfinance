@@ -141,28 +141,30 @@ def get_assets(filters):
         FROM (SELECT a.asset_category,
                      acc.fixed_asset_account as fixed_asset_account,
 
-                   ifnull(sum(case when ds.schedule_date < %(from_date)s and (ifnull(a.disposal_date, 0) = 0 or a.disposal_date >= %(from_date)s) then
-                                   ds.depreciation_amount
+                   ifnull(sum(case when gle.posting_date < %(from_date)s and (ifnull(a.disposal_date, 0) = 0 or a.disposal_date >= %(from_date)s) then
+                                   gle.debit
                               else
                                    0
                               end), 0) as accumulated_depreciation_as_on_from_date,
                    ifnull(sum(case when ifnull(a.disposal_date, 0) != 0 and a.disposal_date >= %(from_date)s
-                                        and a.disposal_date <= %(to_date)s and ds.schedule_date <= a.disposal_date then
-                                   ds.depreciation_amount
+                                        and a.disposal_date <= %(to_date)s and gle.posting_date <= a.disposal_date then
+                                   gle.debit
                               else
                                    0
                               end), 0) as depreciation_eliminated_during_the_period,
-                   ifnull(sum(case when ds.schedule_date >= %(from_date)s and ds.schedule_date <= %(to_date)s
-                                        and (ifnull(a.disposal_date, 0) = 0 or ds.schedule_date <= a.disposal_date) then
-                                   ds.depreciation_amount
+                   ifnull(sum(case when gle.posting_date >= %(from_date)s and gle.posting_date <= %(to_date)s
+                                        and (ifnull(a.disposal_date, 0) = 0 or gle.posting_date <= a.disposal_date) then
+                                   gle.debit
                               else
                                    0
                               end), 0) as depreciation_amount_during_the_period
             FROM `tabAsset` a
-            LEFT JOIN `tabDepreciation Schedule` ds ON a.name = ds.parent
+            join `tabGL Entry` gle
+			on
+			gle.against_voucher = a.name
             LEFT JOIN `tabAsset Category Account` acc ON a.asset_category = acc.parent
             WHERE a.docstatus = 1 AND a.company = %(company)s AND a.purchase_date <= %(to_date)s
-              AND ifnull(ds.journal_entry, '') != '' {condition}
+               {condition}
             GROUP BY a.asset_category
             UNION
             SELECT a.asset_category,

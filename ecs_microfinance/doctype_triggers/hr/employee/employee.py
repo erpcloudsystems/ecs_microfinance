@@ -11,6 +11,25 @@ def round_to_quarter(number):
 
 
 @frappe.whitelist()
+def make_employee_contract(docname, method=None):
+    doc = frappe.get_doc("Employee", docname)
+    emp_contract = frappe.new_doc("Employee Contracts")
+    emp_contract.employee = doc.employee
+    emp_contract.save()
+    frappe.msgprint(_("Employee Contract of {0} is created. <a href='/app/employee-contracts/{1}'>{2}</a>").format(doc.employee_name, emp_contract.name, _("View Employee Contract")))
+
+
+frappe.whitelist()
+def make_employee_probation_period(docname, method=None):
+    doc = frappe.get_doc("Employee", docname)
+    emp_probation = frappe.new_doc("Employee Probation Period")
+    emp_probation.employee = doc.employee
+    emp_probation.save()
+    frappe.msgprint(_("Employee Probation Period of {0} is created. <a href='/app/employee-probation-period/{1}'>{2}</a>").format(doc.employee_name, emp_probation.name, _("View Employee Probation Period")))
+
+
+
+@frappe.whitelist()
 def before_insert(doc, method=None):
     doc.contract_end_date = add_to_date(doc.date_of_joining, days=-1, years=1)
 
@@ -93,18 +112,6 @@ def before_validate(doc, method=None):
     pass
 @frappe.whitelist()
 def validate(doc, method=None):
-
-    # date_of_joining = doc.get("date_of_joining")
-    # if date_of_joining:
-    #     date_of_joining = datetime.datetime.strptime(str(date_of_joining).split(" ")[0], '%Y-%m-%d').date()
-    #     day = date_of_joining.day
-    #     month = date_of_joining.month
-    #     year = date_of_joining.year
-    #     year1 = year+1
-    #     day1 = day-1
-    #
-    #     doc.contract_end_date = datetime.datetime.now().date().replace(year=year1, day=day1)
-
 
     if doc.status == "Left" and doc.user_id:
         user = frappe.get_doc("User", doc.user_id)
